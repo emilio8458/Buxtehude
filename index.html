@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buxtehude in Aichtal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+      color: #333;
+    }
+    header {
+      background: #4a7ba7;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header img {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border-radius: 50%;
+      border: 3px solid white;
+      background: white;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #4a7ba7;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    #map {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+      margin-top: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ddd;
+      margin-top: 2rem;
+      border-top: 2px solid #ccc;
+    }
+  </style>
+  <!-- Leaflet Karten-Bibliothek -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <img src="https://img.icons8.com/color/96/shield.png" alt="Wappen Buxtehude Aichtal">
+    <h1>Willkommen in Buxtehude (Aichtal)</h1>
+    <p>Die Heimat des Schluckaufs</p>
+  </header>
+
+  <main>
+    <h2>🎭 Naturtheater Großötzingen</h2>
+    <p>Das kulturelle Herzstück unserer Region. Hier treffen sich Menschen, die das besondere Flair von Buxtehude in Aichtal erleben wollen.</p>
+
+    <h2>🗣 Die Sprache: Buxtehüdisch</h2>
+    <p>In Buxtehude wird Buxtehüdisch gesprochen – eine Sprache voller Leben, Humor und einem ganz besonderen Markenzeichen: dem <strong>Schluckauf</strong>.</p>
+
+    <h2>🌍 Unterbuxtehude</h2>
+    <p>Neben dem bekannten Buxtehude gibt es auch das sagenumwobene Unterbuxtehude. Ein Ort voller Geschichten und Geheimnisse.</p>
+
+    <h2>📸 Eindrücke aus unserer Gemeinde</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=800&q=80" alt="Dorfblick">
+      <img src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=800&q=80" alt="Dorfkirche">
+      <!-- Naturtheater (symbolisches Bild von einer Bühne im Grünen) -->
+      <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=800&q=80" alt="Naturtheater Grötzingen">
+    </div>
+
+    <h2>🗺 Hier liegt Buxtehude in Aichtal</h2>
+    <p>Auf der Karte markiert: Unser charmantes Buxtehude mitten im Aichtal.</p>
+    <div id="map"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Buxtehude in Aichtal – Mit Schluckauf gesprochen</p>
+  </footer>
+
+  <script>
+    // Leaflet Karte initialisieren
+    var map = L.map('map').setView([48.622, 9.211], 13);
+
+    // OpenStreetMap Layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // Marker auf Aichtal setzen
+    var marker = L.marker([48.622, 9.211]).addTo(map);
+    marker.bindPopup("<b>Buxtehude in Aichtal</b><br>Hier wird Buxtehüdisch gesprochen.").openPopup();
+  </script>
+</body>
+</html>
