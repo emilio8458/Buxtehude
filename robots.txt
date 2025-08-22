@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://buxtehude-aichtal.dynv6.net/sitemap.xml

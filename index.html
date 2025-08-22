@@ -3,7 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buxtehude in Aichtal</title>
+  <title>Buxtehude in Aichtal – Naturtheater & Dorfleben</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Willkommen in Buxtehude in Aichtal – die Heimat des Schluckaufs. Entdecke das Naturtheater Großötzingen, die Sprache Buxtehüdisch und die einzigartige Dorfgemeinschaft.">
+  <meta name="keywords" content="Buxtehude Aichtal, Naturtheater Großötzingen, Buxtehüdisch, Dorfleben, Unterbuxtehude, Schwäbische Alb, Gemeinde Aichtal">
+  <meta name="author" content="Buxtehude in Aichtal">
+
+  <!-- Open Graph (Social Media Vorschau) -->
+  <meta property="og:title" content="Buxtehude in Aichtal – Naturtheater & Dorfleben">
+  <meta property="og:description" content="Die Heimat des Schluckaufs: Buxtehude in Aichtal. Mit Naturtheater, Buxtehüdisch und Unterbuxtehude.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=800&q=80">
+  <meta property="og:url" content="http://buxtehude-aichtal.dynv6.net/">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://img.icons8.com/color/96/shield.png" type="image/png">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -19,14 +35,28 @@
       position: relative;
     }
     header img {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       position: absolute;
       top: 20px;
       left: 20px;
       border-radius: 50%;
       border: 3px solid white;
       background: white;
+    }
+    nav {
+      background: #366185;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     main {
       max-width: 1000px;
@@ -67,16 +97,24 @@
       border-top: 2px solid #ccc;
     }
   </style>
+
   <!-- Leaflet Karten-Bibliothek -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
   <header>
-    <img src="https://img.icons8.com/color/96/shield.png" alt="Wappen Buxtehude Aichtal">
-    <h1>Willkommen in Buxtehude (Aichtal)</h1>
+    <img src="https://img.icons8.com/color/96/shield.png" alt="Wappen von Buxtehude in Aichtal">
+    <h1>Buxtehude in Aichtal</h1>
     <p>Die Heimat des Schluckaufs</p>
   </header>
+
+  <nav>
+    <a href="/">Start</a>
+    <a href="/naturtheater.html">Naturtheater</a>
+    <a href="/unterbuxtehude.html">Unterbuxtehude</a>
+    <a href="/kontakt.html">Kontakt</a>
+  </nav>
 
   <main>
     <h2>🎭 Naturtheater Großötzingen</h2>
@@ -90,10 +128,9 @@
 
     <h2>📸 Eindrücke aus unserer Gemeinde</h2>
     <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=800&q=80" alt="Dorfblick">
-      <img src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=800&q=80" alt="Dorfkirche">
-      <!-- Naturtheater (symbolisches Bild von einer Bühne im Grünen) -->
-      <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=800&q=80" alt="Naturtheater Grötzingen">
+      <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=800&q=80" alt="Landschaftsblick auf das Dorf Aichtal">
+      <img src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=800&q=80" alt="Kirche in Aichtal">
+      <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=800&q=80" alt="Naturtheater Grötzingen Bühne im Grünen">
     </div>
 
     <h2>🗺 Hier liegt Buxtehude in Aichtal</h2>
